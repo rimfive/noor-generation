@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noor Génération — ONG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, hopeful, dignified — a promise to children, not a pity appeal.
+   IDEA: the logo's sunrise over the lagoon — each child is a light rising.
+   PICTURE: a live 3D sunrise: low-poly sun over moving water, small lights drifting up.
+   COLOUR and TYPE: terracotta field, Abidjan-lagoon teal, sun gold; Cinzel for the name, Fraunces titles, DM Sans body.
+   LAYOUT: full-bleed 3D hero, then sand bands, programmes as a 2x2, one teal band to act, terracotta footer. */
+:root{color-scheme:light dark;
+  --terra:#A4532E;--terra-d:#7E3C1F;--gold:#F2C48D;--lagoon:#14514D;
+  --bg:light-dark(#FBF6EF,#1A1210);--card:light-dark(#FFFFFF,#261A16);
+  --ink:light-dark(#2E1B13,#F6EBDD);--muted:light-dark(#6B4F42,#CDB7A6);
+  --line:light-dark(#E8D9C8,#3B2A23)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 'DM Sans',system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.08;text-wrap:balance;margin:0}
+p{text-wrap:pretty}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto}
+.band{padding:clamp(56px,8vw,112px) max(5vw,18px)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:10;padding:12px max(5vw,18px);color:#FBF3EA;transition:background .3s}
+nav .wrap{display:flex;align-items:center;gap:20px}
+nav.solid{background:var(--terra-d)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.brand b{font:700 18px/1 'Cinzel',serif;letter-spacing:1.5px}
+.links{display:flex;gap:6px;flex-wrap:wrap}
+.links a{text-decoration:none;padding:10px 12px;border-radius:8px;font-weight:500;font-size:15px}
+.links a:hover{background:rgba(255,255,255,.12)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;
+  font:700 16px 'DM Sans',sans-serif;text-decoration:none;border:0;cursor:pointer}
+.btn.gold{background:var(--gold);color:#3A2218}.btn.gold:hover{background:#F7D3A8}
+.btn.ghost{border:2px solid currentColor;background:transparent;color:inherit}
+@media(max-width:760px){.links{display:none}}
+@media(max-width:480px){.brand b{font-size:14px;letter-spacing:1px}.brand svg{width:32px}nav .btn{min-height:44px;padding:0 16px;font-size:15px}nav .wrap{gap:10px}}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#FBF3EA;
+  background:linear-gradient(180deg,#5E2A17 0%,#A4532E 45%,#D98A55 72%,#14514D 72.1%,#0E3B38 100%)}
+#scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .copy{position:relative;z-index:2;padding:0 max(5vw,18px) clamp(48px,8vh,96px);max-width:1180px;margin:0 auto;width:100%;
+  pointer-events:none}
+.hero .copy>*{pointer-events:auto}
+.hero h1{font-size:clamp(44px,7vw,92px);font-weight:700;max-width:12ch;text-shadow:0 2px 30px rgba(40,15,5,.45)}
+.hero p{font-size:clamp(17px,1.6vw,20px);max-width:520px;margin:18px 0 28px;text-shadow:0 1px 14px rgba(40,15,5,.6)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+
+/* mission */
+.mission .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.mission h2{font-size:clamp(34px,4.4vw,52px)}
+.mission .lead{font-size:20px;margin:0 0 16px}
+.noor{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
+.noor h3{font-size:24px;margin-bottom:8px}
+.noor p{margin:0;color:var(--muted)}
+@media(max-width:700px){.hero::after{content:'';position:absolute;inset:auto 0 0 0;height:65%;background:linear-gradient(0deg,rgba(14,40,37,.8),rgba(14,40,37,0));z-index:1;pointer-events:none}}
+@media(max-width:820px){.mission .wrap{grid-template-columns:1fr}}
+
+/* programmes */
+.programs{background:light-dark(#F4E8DA,#211613)}
+.programs h2,.act h2,.contact h2{font-size:clamp(32px,4vw,48px);margin-bottom:12px}
+.intro{color:var(--muted);max-width:620px;margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.prog{background:var(--card);border-radius:22px;padding:30px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:20px;align-items:start}
+.prog .ic{width:56px;height:56px;border-radius:16px;background:var(--terra);display:grid;place-items:center}
+.prog h3{font-size:24px;margin-bottom:6px}
+.prog p{margin:0;color:var(--muted)}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+
+/* act */
+.act{background:var(--lagoon);color:#F1F7F5}
+.act .intro{color:#C9E0DB}
+.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.way{border:1.5px solid rgba(241,247,245,.35);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.way h3{font-size:26px}
+.way p{margin:0 0 8px;color:#D6E8E4;flex:1}
+.way .btn{align-self:flex-start}
+@media(max-width:860px){.ways{grid-template-columns:1fr}}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px)}
+.info{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.info li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.info span{color:var(--muted)}
+form{display:grid;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+label{font-weight:500;font-size:15px;display:grid;gap:6px}
+input,textarea,select{font:16px 'DM Sans',sans-serif;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;min-height:46px}
+textarea{min-height:120px;resize:vertical}
+.btn.terra{background:var(--terra);color:#FBF3EA}.btn.terra:hover{background:var(--terra-d)}
+.msg{margin:0;font-size:15px;color:var(--lagoon);font-weight:500}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--terra-d);color:#FBF3EA;padding:40px max(5vw,18px)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+footer small{opacity:.85;font-size:14px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav id="nav" aria-label="Navigation principale"><div class="wrap">
+  <a class="brand" href="#top" aria-label="Noor Génération, accueil">
+    <svg width="40" height="36" viewBox="0 0 72 64" fill="none" stroke="#FBF3EA" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
+      <circle cx="36" cy="24" r="10"/><path d="M36 4v5M20 10l3.5 3.5M52 10l-3.5 3.5M14 24h5M58 24h-5"/>
+      <path d="M10 44q6.5-4 13 0t13 0 13 0 13 0M10 51q6.5-4 13 0t13 0 13 0 13 0M10 58q6.5-4 13 0t13 0 13 0 13 0"/>
+    </svg>
+    <b>NŪŌR GENERATION</b>
+  </a>
+  <div class="links">
+    <a href="#mission">Mission</a><a href="#programmes">Programmes</a><a href="#agir">Agir</a><a href="#contact">Contact</a>
+  </div>
+  <a class="btn gold" href="#agir">Faire un don</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="copy">
+    <h1>Mettre chaque enfant en lumière.</h1>
+    <p>Noor Génération est une ONG qui accompagne les enfants en difficulté à Abidjan : école, santé, protection et parrainage.</p>
+    <div class="cta">
+      <a class="btn gold" href="#agir">Parrainer un enfant</a>
+      <a class="btn ghost" href="#mission">Découvrir notre mission</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="band mission" id="mission">
+  <div class="wrap">
+    <div>
+      <h2>Chaque enfant porte une lumière. Notre rôle est de l'aider à briller.</h2>
+    </div>
+    <div>
+      <p class="lead">Trop d'enfants grandissent sans école, sans soins ou sans toit sûr. Nous agissons sur le terrain pour leur redonner une chance d'apprendre, de grandir en bonne santé et de construire leur avenir.</p>
+      <div class="noor">
+        <h3>Pourquoi « Noor » ?</h3>
+        <p>Noor signifie « lumière ». Le soleil levant de notre logo, au-dessus des vagues, symbolise une nouvelle génération qui se lève. Bâtir l'avenir, ensemble.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band programs" id="programmes">
+  <div class="wrap">
+    <h2>Nos programmes</h2>
+    <p class="intro">Quatre axes d'action, pensés pour répondre aux besoins les plus urgents des enfants.</p>
+    <div class="grid" id="progs"></div>
+  </div>
+</section>
+
+<section class="band act" id="agir">
+  <div class="wrap">
+    <h2>Comment aider ?</h2>
+    <p class="intro">Ici à Abidjan, chacun peut changer la vie d'un enfant de son quartier.</p>
+    <div class="ways" id="ways"></div>
+  </div>
+</section>
+
+<section class="band contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Contactez-nous</h2>
+      <p class="intro">Une question, un partenariat, une envie d'aider ? Écrivez-nous.</p>
+      <ul class="info">
+        <li><span>Téléphone</span><b>[Téléphone / WhatsApp]</b></li>
+        <li><span>Email</span><b>[Email]</b></li>
+        <li><span>Adresse</span><b>[Commune], Abidjan, Côte d'Ivoire</b></li>
+        <li><span>Réseaux</span><b>[Facebook] · [Instagram]</b></li>
+      </ul>
+    </div>
+    <form id="form" novalidate>
+      <label>Votre nom<input id="f-name" name="name" autocomplete="name" required></label>
+      <label>Email<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+      <label>Je souhaite
+        <select id="f-why" name="why">
+          <option>Faire un don</option><option>Parrainer un enfant</option><option>Devenir bénévole</option><option>Autre demande</option>
+        </select>
+      </label>
+      <label>Message<textarea id="f-msg" name="message"></textarea></label>
+      <button class="btn terra" type="submit">Envoyer le message</button>
+      <p class="msg" id="f-out" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b style="font:700 16px 'Cinzel',serif;letter-spacing:1.5px">NŪŌR GENERATION — Bâtir l'avenir, ensemble</b>
+    <small>© 2026 Noor Génération · ONG, Abidjan, Côte d'Ivoire</small>
+  </div>
+</footer>
+
+<script>
+{
+  const ic = {
+    book:'<path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/>',
+    heart:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>',
+    home:'<path d="M3 10.5 12 3l9 7.5M5 9.5V21h14V9.5M10 21v-6h4v6"/>',
+    hands:'<circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20a6 6 0 0 1 12 0M15 20a4 4 0 0 1 6-3.5"/>'
+  };
+  const svg = p => `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FBF3EA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+  const progs = [
+    ['book','Éducation','Fournitures, frais de scolarité et soutien scolaire pour que chaque enfant reste à l\'école.'],
+    ['heart','Santé & nutrition','Repas, soins de base et kits d\'hygiène pour grandir en bonne santé.'],
+    ['home','Enfants de la rue','Accueil, protection et accompagnement vers la réinsertion familiale et scolaire.'],
+    ['hands','Parrainage','Un parrain ou une marraine accompagne un enfant dans la durée, avec des nouvelles régulières.']
+  ];
+  document.getElementById('progs').innerHTML = progs.map(([i,t,d]) =>
+    `<article class="prog"><div class="ic">${svg(ic[i])}</div><div><h3>${t}</h3><p>${d}</p></div></article>`).join('');
+
+  const ways = [
+    ['Donner','Un don ponctuel ou mensuel finance fournitures, repas et soins.','Faire un don','Faire un don'],
+    ['Parrainer','Accompagnez un enfant toute l\'année et suivez ses progrès.','Parrainer un enfant','Parrainer un enfant'],
+    ['S\'engager','Donnez de votre temps ou de vos compétences, sur le terrain à Abidjan.','Devenir bénévole','Devenir bénévole']
+  ];
+  document.getElementById('ways').innerHTML = ways.map(([t,d,b,v]) =>
+    `<div class="way"><h3>${t}</h3><p>${d}</p><a class="btn gold" href="#contact" data-why="${v}">${b}</a></div>`).join('');
+  document.getElementById('ways').addEventListener('click', e => {
+    const a = e.target.closest('[data-why]'); if (a) document.getElementById('f-why').value = a.dataset.why;
+  });
+
+  const form = document.getElementById('form'), out = document.getElementById('f-out');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const n = document.getElementById('f-name').value.trim(), m = document.getElementById('f-mail').value.trim();
+    if (!n || !/^\S+@\S+\.\S+$/.test(m)) { out.textContent = 'Indiquez votre nom et une adresse email valide.'; return; }
+    out.textContent = 'Merci ' + n + ' ! Le formulaire n\'est pas encore relié à une boîte mail : écrivez-nous en attendant à [Email].';
+  });
+
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('solid', scrollY > 60);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+}
+</script>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+{
+  const canvas = document.getElementById('scene');
+  const hero = canvas.parentElement;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); }
+  catch (e) { canvas.remove(); }
+  if (renderer) {
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0xA4532E, 18, 60);
+    const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 200);
+    camera.position.set(0, 3.2, 14);
+
+    scene.add(new THREE.HemisphereLight(0xFFD9A8, 0x14514D, 1.4));
+    const key = new THREE.DirectionalLight(0xFFC98A, 2.2);
+    key.position.set(0, 6, -10); scene.add(key);
+
+    // Sun: low-poly core + glow + rays
+    const sun = new THREE.Group(); sun.position.set(3.2, 4.2, -14); scene.add(sun);
+    const core = new THREE.Mesh(new THREE.IcosahedronGeometry(2.4, 2),
+      new THREE.MeshStandardMaterial({ color: 0xF2C48D, emissive: 0xF0A85C, emissiveIntensity: 1.1, flatShading: true, roughness: .6 }));
+    sun.add(core);
+    const glowTex = (() => {
+      const c = document.createElement('canvas'); c.width = c.height = 128;
+      const g = c.getContext('2d'), gr = g.createRadialGradient(64,64,0,64,64,64);
+      gr.addColorStop(0,'rgba(255,220,170,1)'); gr.addColorStop(.4,'rgba(255,190,120,.45)'); gr.addColorStop(1,'rgba(255,170,100,0)');
+      g.fillStyle = gr; g.fillRect(0,0,128,128);
+      const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+    })();
+    const glow = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+    glow.scale.set(14, 14, 1); sun.add(glow);
+    const rays = new THREE.Group(); sun.add(rays);
+    const rayGeo = new THREE.BoxGeometry(.22, 1.3, .22), rayMat = new THREE.MeshBasicMaterial({ color: 0xFBE3C2 });
+    for (let i = 0; i < 12; i++) {
+      const a = i / 12 * Math.PI * 2, r = new THREE.Mesh(rayGeo, rayMat);
+      r.position.set(Math.cos(a) * 3.6, Math.sin(a) * 3.6, 0); r.rotation.z = a - Math.PI / 2; rays.add(r);
+    }
+
+    // Sea: low-poly animated plane (the logo's waves)
+    const seaGeo = new THREE.PlaneGeometry(80, 50, 90, 60); seaGeo.rotateX(-Math.PI / 2);
+    const base = seaGeo.attributes.position.array.slice();
+    const sea = new THREE.Mesh(seaGeo, new THREE.MeshStandardMaterial({ color: 0x1E6A63, flatShading: true, roughness: .45, metalness: .1 }));
+    sea.position.set(0, -.6, -8); scene.add(sea);
+
+    // Lights rising: one per child
+    const N = 220, pos = new Float32Array(N * 3), spd = new Float32Array(N);
+    for (let i = 0; i < N; i++) { pos[i*3] = (Math.random()-.5)*30; pos[i*3+1] = Math.random()*12; pos[i*3+2] = -Math.random()*22 + 4; spd[i] = .25 + Math.random()*.6; }
+    const ptsGeo = new THREE.BufferGeometry(); ptsGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const pts = new THREE.Points(ptsGeo, new THREE.PointsMaterial({ map: glowTex, size: .55, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, color: 0xFFE2B8 }));
+    scene.add(pts);
+
+    const resize = () => {
+      const w = hero.clientWidth, h = hero.clientHeight;
+      renderer.setSize(w, h, false); camera.aspect = w / h;
+      camera.position.z = w < 700 ? 18 : 14; sun.position.x = w < 700 ? 1.2 : 3.2; sun.position.y = w < 700 ? 9 : 4.2;
+      camera.updateProjectionMatrix();
+    };
+    const ro = new ResizeObserver(resize); ro.observe(hero); resize();
+
+    const mouse = { x: 0, y: 0 };
+    addEventListener('pointermove', e => { mouse.x = e.clientX / innerWidth - .5; mouse.y = e.clientY / innerHeight - .5; }, { passive: true });
+
+    let visible = true;
+    const io = new IntersectionObserver(([en]) => { visible = en.isIntersecting; }); io.observe(hero);
+
+    const p = seaGeo.attributes.position, clock = new THREE.Clock();
+    const frame = () => {
+      if (!visible) return;
+      const t = clock.getElapsedTime(), dt = Math.min(clock.getDelta(), .05) || .016;
+      for (let i = 0; i < p.count; i++) {
+        const x = base[i*3], z = base[i*3+2];
+        p.array[i*3+1] = Math.sin(x * .35 + t * 1.1) * .32 + Math.sin(z * .5 + t * .8) * .22 + Math.sin((x + z) * .9 + t * 1.7) * .07;
+      }
+      p.needsUpdate = true; seaGeo.computeVertexNormals();
+      for (let i = 0; i < N; i++) {
+        pos[i*3+1] += spd[i] * .016; pos[i*3] += Math.sin(t + i) * .003;
+        if (pos[i*3+1] > 13) pos[i*3+1] = -.2;
+      }
+      ptsGeo.attributes.position.needsUpdate = true;
+      core.rotation.y = t * .15; rays.rotation.z = t * .06;
+      const s = 1 + Math.sin(t * 1.3) * .04; glow.scale.set(14 * s, 14 * s, 1);
+      camera.position.x += (mouse.x * 2 - camera.position.x) * .04;
+      camera.position.y += (3.2 - mouse.y * 1.2 - camera.position.y) * .04;
+      camera.lookAt(0, 2.4, -10);
+      renderer.render(scene, camera);
+    };
+    if (reduce) { camera.lookAt(0, 2.4, -10); frame(); setTimeout(frame, 50); }
+    else renderer.setAnimationLoop(frame);
+  }
+}
+</script>
+</body>
+</html>
