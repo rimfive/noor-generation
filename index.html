@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Noor Génération, ONG d'Abidjan au service des enfants en difficulté. Noor Generation, an Abidjan non-profit supporting children in need.">
 <title>Noor Génération — ONG</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -41,6 +42,8 @@ nav.solid{background:var(--terra-d)}
   font:700 16px 'DM Sans',sans-serif;text-decoration:none;border:0;cursor:pointer}
 .btn.gold{background:var(--gold);color:#3A2218}.btn.gold:hover{background:#F7D3A8}
 .btn.ghost{border:2px solid currentColor;background:transparent;color:inherit}
+.lang{min-height:44px;min-width:44px;padding:0 12px;border-radius:999px;border:1.5px solid rgba(251,243,234,.6);background:transparent;color:#FBF3EA;font:700 14px 'DM Sans',sans-serif;letter-spacing:1px;cursor:pointer}
+.lang:hover{background:rgba(255,255,255,.12)}
 @media(max-width:760px){.links{display:none}}
 @media(max-width:480px){.brand b{font-size:14px;letter-spacing:1px}.brand svg{width:32px}nav .btn{min-height:44px;padding:0 16px;font-size:15px}nav .wrap{gap:10px}}
 
@@ -129,8 +132,8 @@ footer small{opacity:.85;font-size:14px}
 </head>
 <body>
 
-<nav id="nav" aria-label="Navigation principale"><div class="wrap">
-  <a class="brand" href="#top" aria-label="Noor Génération, accueil">
+<nav id="nav" aria-label="Navigation principale" data-i18n-aria="aNav"><div class="wrap">
+  <a class="brand" href="#top" aria-label="Noor Génération, accueil" data-i18n-aria="aHome">
     <svg width="40" height="36" viewBox="0 0 72 64" fill="none" stroke="#FBF3EA" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
       <circle cx="36" cy="24" r="10"/><path d="M36 4v5M20 10l3.5 3.5M52 10l-3.5 3.5M14 24h5M58 24h-5"/>
       <path d="M10 44q6.5-4 13 0t13 0 13 0 13 0M10 51q6.5-4 13 0t13 0 13 0 13 0M10 58q6.5-4 13 0t13 0 13 0 13 0"/>
@@ -138,19 +141,20 @@ footer small{opacity:.85;font-size:14px}
     <b>NŪŌR GENERATION</b>
   </a>
   <div class="links">
-    <a href="#mission">Mission</a><a href="#programmes">Programmes</a><a href="#actions">Nos actions</a><a href="#agir">Agir</a><a href="#contact">Contact</a>
+    <a href="#mission" data-i18n="nMission">Mission</a><a href="#programmes" data-i18n="nProg">Programmes</a><a href="#actions" data-i18n="nActions">Nos actions</a><a href="#agir" data-i18n="nAct">Agir</a><a href="#contact" data-i18n="nContact">Contact</a>
   </div>
-  <a class="btn gold" href="#agir">Faire un don</a>
+  <button type="button" class="lang" id="lang" aria-label="Read this site in English">EN</button>
+  <a class="btn gold" href="#agir" data-i18n="nDonate">Faire un don</a>
 </div></nav>
 
 <header class="hero" id="top">
   <canvas id="scene" aria-hidden="true"></canvas>
   <div class="copy">
-    <h1>Mettre chaque enfant en lumière.</h1>
-    <p>À Abidjan, des enfants grandissent loin de l'école, des soins ou d'un foyer sûr. Avec Noor Génération, nous marchons à leurs côtés, pour qu'ils apprennent, grandissent en bonne santé et osent rêver d'avenir.</p>
+    <h1 data-i18n="h1">Mettre chaque enfant en lumière.</h1>
+    <p data-i18n="heroP">À Abidjan, des enfants grandissent loin de l'école, des soins ou d'un foyer sûr. Avec Noor Génération, nous marchons à leurs côtés, pour qu'ils apprennent, grandissent en bonne santé et osent rêver d'avenir.</p>
     <div class="cta">
-      <a class="btn gold" href="#agir">Parrainer un enfant</a>
-      <a class="btn ghost" href="#mission">Découvrir notre histoire</a>
+      <a class="btn gold" href="#agir" data-i18n="ctaSponsor">Parrainer un enfant</a>
+      <a class="btn ghost" href="#mission" data-i18n="ctaStory">Découvrir notre histoire</a>
     </div>
   </div>
 </header>
@@ -159,18 +163,18 @@ footer small{opacity:.85;font-size:14px}
 <section class="band mission" id="mission">
   <div class="wrap">
     <div>
-      <h2>Chaque enfant porte une lumière. Nous sommes là pour qu'elle ne s'éteigne pas.</h2>
+      <h2 data-i18n="mH2">Chaque enfant porte une lumière. Nous sommes là pour qu'elle ne s'éteigne pas.</h2>
     </div>
     <div>
-      <p class="lead">Derrière chaque enfant en difficulté, il y a un prénom, une histoire et des rêves. Nous ne venons pas avec des solutions toutes faites : nous écoutons, nous accompagnons, et nous restons. Un cahier, un repas, un soin, une main tendue… Ce sont souvent de petits gestes qui changent le cours d'une vie.</p>
+      <p class="lead" data-i18n="mLead">Derrière chaque enfant en difficulté, il y a un prénom, une histoire et des rêves. Nous ne venons pas avec des solutions toutes faites : nous écoutons, nous accompagnons, et nous restons. Un cahier, un repas, un soin, une main tendue… Ce sont souvent de petits gestes qui changent le cours d'une vie.</p>
       <div class="noor">
-        <h3>Pourquoi « Noor » ?</h3>
-        <p>« Noor » veut dire « lumière ». Le soleil qui se lève au-dessus des vagues, sur notre logo, c'est cette nouvelle génération qui se relève, doucement mais sûrement. Bâtir l'avenir, ensemble.</p>
+        <h3 data-i18n="whyH">Pourquoi « Noor » ?</h3>
+        <p data-i18n="whyP">« Noor » veut dire « lumière ». Le soleil qui se lève au-dessus des vagues, sur notre logo, c'est cette nouvelle génération qui se relève, doucement mais sûrement. Bâtir l'avenir, ensemble.</p>
       </div>
       <dl class="legal">
-        <div><dt>Statut</dt><dd>ONG de droit ivoirien</dd></div>
-        <div><dt>Récépissé n°</dt><dd>001/NG/PR/VP/2026/dm</dd></div>
-        <div><dt>Courrier</dt><dd>12 BP 692 Abidjan 12</dd></div>
+        <div><dt data-i18n="lStatus">Statut</dt><dd data-i18n="lStatusV">ONG de droit ivoirien</dd></div>
+        <div><dt data-i18n="lReg">Récépissé n°</dt><dd>001/NG/PR/VP/2026/dm</dd></div>
+        <div><dt data-i18n="lMail">Courrier</dt><dd>12 BP 692 Abidjan 12</dd></div>
       </dl>
     </div>
   </div>
@@ -178,29 +182,29 @@ footer small{opacity:.85;font-size:14px}
 
 <section class="band programs" id="programmes">
   <div class="wrap">
-    <h2>Nos programmes</h2>
-    <p class="intro">Quatre façons d'être présents pour les enfants, là où ils en ont le plus besoin.</p>
+    <h2 data-i18n="pH2">Nos programmes</h2>
+    <p class="intro" data-i18n="pIntro">Quatre façons d'être présents pour les enfants, là où ils en ont le plus besoin.</p>
     <div class="grid" id="progs"></div>
   </div>
 </section>
 
 <section class="band" id="actions">
   <div class="wrap">
-    <h2 style="font-size:clamp(32px,4vw,48px);margin-bottom:12px">Nos actions sur le terrain</h2>
-    <p class="intro">Ici, nous partagerons nos journées sur le terrain : les rencontres, les sourires et le travail accompli ensemble.</p>
-    <div class="filters" id="filters" role="group" aria-label="Filtrer les actions"></div>
+    <h2 style="font-size:clamp(32px,4vw,48px);margin-bottom:12px" data-i18n="aH2">Nos actions sur le terrain</h2>
+    <p class="intro" data-i18n="aIntro">Ici, nous partagerons nos journées sur le terrain : les rencontres, les sourires et le travail accompli ensemble.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filtrer les actions" data-i18n-aria="aFilter"></div>
     <div class="gal" id="gal"></div>
   </div>
-  <dialog id="viewer" aria-label="Média agrandi">
+  <dialog id="viewer" aria-label="Média agrandi" data-i18n-aria="aViewer">
     <div id="viewer-media"></div>
-    <div class="bar"><span id="viewer-cap"></span><button type="button" id="viewer-close">Fermer</button></div>
+    <div class="bar"><span id="viewer-cap"></span><button type="button" id="viewer-close" data-i18n="close">Fermer</button></div>
   </dialog>
 </section>
 
 <section class="band act" id="agir">
   <div class="wrap">
-    <h2>Comment aider ?</h2>
-    <p class="intro">Pas besoin d'être riche pour changer une vie. Ici à Abidjan, chacun peut tendre la main à un enfant de son quartier.</p>
+    <h2 data-i18n="wH2">Comment aider ?</h2>
+    <p class="intro" data-i18n="wIntro">Pas besoin d'être riche pour changer une vie. Ici à Abidjan, chacun peut tendre la main à un enfant de son quartier.</p>
     <div class="ways" id="ways"></div>
   </div>
 </section>
@@ -208,26 +212,27 @@ footer small{opacity:.85;font-size:14px}
 <section class="band contact" id="contact">
   <div class="wrap">
     <div>
-      <h2>Contactez-nous</h2>
-      <p class="intro">Une question, une idée, une envie d'aider ? Écrivez-nous : nous serons heureux de vous lire et de vous répondre.</p>
+      <h2 data-i18n="cH2">Contactez-nous</h2>
+      <p class="intro" data-i18n="cIntro">Une question, une idée, une envie d'aider ? Écrivez-nous : nous serons heureux de vous lire et de vous répondre.</p>
       <ul class="info">
-        <li><span>Téléphone</span><b>[Téléphone / WhatsApp]</b></li>
+        <li><span data-i18n="cPhone">Téléphone</span><b>[Téléphone / WhatsApp]</b></li>
         <li><span>Email</span><b>[Email]</b></li>
-        <li><span>Adresse</span><b>[Commune], Abidjan, Côte d'Ivoire</b></li>
-        <li><span>Courrier</span><b>12 BP 692 Abidjan 12</b></li>
-        <li><span>Réseaux</span><b>[Facebook] · [Instagram]</b></li>
+        <li><span data-i18n="cAddr">Adresse</span><b>[Commune], Abidjan, Côte d'Ivoire</b></li>
+        <li><span data-i18n="lMail">Courrier</span><b>12 BP 692 Abidjan 12</b></li>
+        <li><span data-i18n="cSocial">Réseaux</span><b>[Facebook] · [Instagram]</b></li>
       </ul>
     </div>
     <form id="form" novalidate>
-      <label>Votre nom<input id="f-name" name="name" autocomplete="name" required></label>
-      <label>Email<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
-      <label>Je souhaite
-        <select id="f-why" name="why">
-          <option>Faire un don</option><option>Parrainer un enfant</option><option>Devenir bénévole</option><option>Autre demande</option>
-        </select>
+      <label><span data-i18n="fName">Votre nom</span><input id="f-name" name="name" autocomplete="name" required></label>
+      <label><span>Email</span><input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+      <label><span data-i18n="fWhy">Je souhaite</span>
+        <select id="f-why" name="why"></select>
       </label>
-      <label>Message<textarea id="f-msg" name="message"></textarea></label>
-      <button class="btn terra" type="submit">Envoyer le message</button>
+      <label><span data-i18n="fCommune">Votre commune</span>
+        <select id="f-commune" name="commune"></select>
+      </label>
+      <label><span>Message</span><textarea id="f-msg" name="message"></textarea></label>
+      <button class="btn terra" type="submit" data-i18n="fSend">Envoyer le message</button>
       <p class="msg" id="f-out" role="status"></p>
     </form>
   </div>
@@ -236,13 +241,39 @@ footer small{opacity:.85;font-size:14px}
 
 <footer>
   <div class="wrap">
-    <b style="font:700 16px 'Cinzel',serif;letter-spacing:1.5px">NŪŌR GENERATION — Bâtir l'avenir, ensemble</b>
-    <small>© 2026 Noor Génération · ONG de droit ivoirien · Récépissé n° 001/NG/PR/VP/2026/dm · 12 BP 692 Abidjan 12</small>
+    <b style="font:700 16px 'Cinzel',serif;letter-spacing:1.5px" data-i18n="fTag">NŪŌR GENERATION — Bâtir l'avenir, ensemble</b>
+    <small data-i18n="fLegal">© 2026 Noor Génération · ONG de droit ivoirien · Récépissé n° 001/NG/PR/VP/2026/dm · 12 BP 692 Abidjan 12</small>
   </div>
 </footer>
 
 <script>
 {
+  /* ===== TEXTES ANGLAIS (English). Le français est dans le HTML. ===== */
+  const EN = {
+    aNav:'Main navigation', aHome:'Noor Generation, home', aFilter:'Filter actions', aViewer:'Enlarged media',
+    nMission:'Mission', nProg:'Programs', nActions:'Our work', nAct:'Get involved', nContact:'Contact', nDonate:'Donate',
+    h1:'Helping every child shine.',
+    heroP:'In Abidjan, some children grow up far from school, from care, or from a safe home. At Noor Generation, we walk beside them, so they can learn, grow up healthy and dare to dream of a future.',
+    ctaSponsor:'Sponsor a child', ctaStory:'Discover our story',
+    mH2:'Every child carries a light. We are here to make sure it never goes out.',
+    mLead:'Behind every child in difficulty there is a name, a story and dreams. We don\'t arrive with ready-made answers: we listen, we walk alongside, and we stay. A notebook, a meal, a treatment, a helping hand… It is often small gestures that change the course of a life.',
+    whyH:'Why “Noor”?',
+    whyP:'“Noor” means “light”. The sun rising above the waves in our logo is this new generation lifting itself up, slowly but surely. Building the future, together.',
+    lStatus:'Status', lStatusV:'Non-profit organisation registered in Côte d\'Ivoire', lReg:'Registration no.', lMail:'Postal address',
+    pH2:'Our programs', pIntro:'Four ways of being there for children, where they need it most.',
+    aH2:'Our work on the ground', aIntro:'Here we will share our days in the field: the encounters, the smiles and the work we accomplish together.',
+    close:'Close',
+    wH2:'How can you help?', wIntro:'You don\'t need to be rich to change a life. Here in Abidjan, and from anywhere in the world, everyone can reach out to a child.',
+    cH2:'Contact us', cIntro:'A question, an idea, a wish to help? Write to us: we will be glad to read your message and reply.',
+    cPhone:'Phone', cAddr:'Address', cSocial:'Social media',
+    fName:'Your name', fWhy:'I would like to', fCommune:'Your commune', fSend:'Send message',
+    fTag:'NŪŌR GENERATION — Building the future, together',
+    fLegal:'© 2026 Noor Generation · Non-profit registered in Côte d\'Ivoire · Registration no. 001/NG/PR/VP/2026/dm · 12 BP 692 Abidjan 12'
+  };
+  const FR = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => { FR[el.dataset.i18n] = el.textContent; });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => { FR[el.dataset.i18nAria] = el.getAttribute('aria-label'); });
+
   const ic = {
     book:'<path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/>',
     heart:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>',
@@ -251,68 +282,120 @@ footer small{opacity:.85;font-size:14px}
   };
   const svg = p => `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FBF3EA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
   const progs = [
-    ['book','Éducation','Un cartable, des fournitures, des frais de scolarité payés, un coup de main pour les devoirs : tout pour qu\'aucun enfant ne quitte l\'école faute de moyens.'],
-    ['heart','Santé & nutrition','Un repas chaud, des soins de base, un kit d\'hygiène. Parce qu\'on apprend mieux et qu\'on rêve plus loin quand on est en bonne santé.'],
-    ['home','Enfants de la rue','Un lieu où être écouté et protégé, puis un chemin, pas à pas, vers la famille et l\'école.'],
-    ['hands','Parrainage','Un parrain ou une marraine qui accompagne un enfant dans la durée : une présence fidèle, et des nouvelles régulières de ses progrès.']
+    { i:'book', fr:['Éducation','Un cartable, des fournitures, des frais de scolarité payés, un coup de main pour les devoirs : tout pour qu\'aucun enfant ne quitte l\'école faute de moyens.'],
+      en:['Education','A school bag, supplies, school fees paid, help with homework: everything so that no child has to leave school for lack of money.'] },
+    { i:'heart', fr:['Santé & nutrition','Un repas chaud, des soins de base, un kit d\'hygiène. Parce qu\'on apprend mieux et qu\'on rêve plus loin quand on est en bonne santé.'],
+      en:['Health & nutrition','A hot meal, basic care, a hygiene kit. Because children learn better and dream bigger when they are healthy.'] },
+    { i:'home', fr:['Enfants de la rue','Un lieu où être écouté et protégé, puis un chemin, pas à pas, vers la famille et l\'école.'],
+      en:['Street children','A place to be heard and protected, then a path, step by step, back to family and to school.'] },
+    { i:'hands', fr:['Parrainage','Un parrain ou une marraine qui accompagne un enfant dans la durée : une présence fidèle, et des nouvelles régulières de ses progrès.'],
+      en:['Sponsorship','A sponsor who stands by a child over time: a faithful presence, with regular news of their progress.'] }
   ];
-  document.getElementById('progs').innerHTML = progs.map(([i,t,d]) =>
-    `<article class="prog"><div class="ic">${svg(ic[i])}</div><div><h3>${t}</h3><p>${d}</p></div></article>`).join('');
-
   const ways = [
-    ['Donner','Chaque don, même modeste, devient un cahier, un repas ou un soin. Ponctuel ou mensuel, il compte vraiment.','Faire un don','Faire un don'],
-    ['Parrainer','Devenez la personne sur qui un enfant peut compter toute l\'année, et suivez ses progrès de près.','Parrainer un enfant','Parrainer un enfant'],
-    ['S\'engager','Votre temps, votre sourire, vos compétences : sur le terrain à Abidjan, chacun a sa place.','Devenir bénévole','Devenir bénévole']
+    { v:'don', fr:['Donner','Chaque don, même modeste, devient un cahier, un repas ou un soin. Ponctuel ou mensuel, il compte vraiment.','Faire un don'],
+      en:['Give','Every gift, however small, becomes a notebook, a meal or medical care. One-off or monthly, it truly counts.','Make a donation'] },
+    { v:'parrain', fr:['Parrainer','Devenez la personne sur qui un enfant peut compter toute l\'année, et suivez ses progrès de près.','Parrainer un enfant'],
+      en:['Sponsor','Become the person a child can count on all year round, and follow their progress closely.','Sponsor a child'] },
+    { v:'commune', fr:['S\'engager pour sa commune','Yopougon, Abobo, Cocody, Koumassi… Rejoignez les bénévoles de votre commune et agissez près de chez vous, pour les enfants de votre quartier.','Rejoindre ma commune'],
+      en:['Act for your commune','Yopougon, Abobo, Cocody, Koumassi… Join the volunteers of your commune in Abidjan and act close to home, for the children of your neighbourhood.','Join my commune'] }
   ];
-  document.getElementById('ways').innerHTML = ways.map(([t,d,b,v]) =>
-    `<div class="way"><h3>${t}</h3><p>${d}</p><a class="btn gold" href="#contact" data-why="${v}">${b}</a></div>`).join('');
-  document.getElementById('ways').addEventListener('click', e => {
-    const a = e.target.closest('[data-why]'); if (a) document.getElementById('f-why').value = a.dataset.why;
-  });
+  const whys = [
+    { v:'don', fr:'Faire un don', en:'Make a donation' },
+    { v:'parrain', fr:'Parrainer un enfant', en:'Sponsor a child' },
+    { v:'commune', fr:'M\'engager dans ma commune', en:'Volunteer in my commune' },
+    { v:'partenaire', fr:'Devenir partenaire (entreprise)', en:'Become a partner (company)' },
+    { v:'autre', fr:'Autre demande', en:'Something else' }
+  ];
+  const communes = ['Abobo','Adjamé','Anyama','Attécoubé','Bingerville','Cocody','Koumassi','Marcory','Plateau','Port-Bouët','Songon','Treichville','Yopougon'];
+  const T = {
+    fr:{ all:'Toutes', video:'▶ Vidéo', emptyB:'Nos premiers souvenirs arrivent bientôt', emptyP:'Les photos et vidéos de nos actions à Abidjan seront partagées ici, avec l\'accord des familles.',
+         pick:'Choisir…', other:'Hors d\'Abidjan / à l\'étranger',
+         err:'Pour vous répondre, il nous faut votre nom et une adresse email valide.',
+         ok:n => 'Merci ' + n + ', votre message nous touche. Le formulaire n\'est pas encore relié à notre boîte mail : en attendant, écrivez-nous à [Email].',
+         switchTo:'EN', switchLabel:'Read this site in English', title:'Noor Génération — ONG' },
+    en:{ all:'All', video:'▶ Video', emptyB:'Our first memories are coming soon', emptyP:'Photos and videos of our work in Abidjan will be shared here, with the families\' consent.',
+         pick:'Choose…', other:'Outside Abidjan / abroad',
+         err:'To reply to you, we need your name and a valid email address.',
+         ok:n => 'Thank you ' + n + ', your message means a lot to us. This form is not yet connected to our mailbox: in the meantime, please write to us at [Email].',
+         switchTo:'FR', switchLabel:'Lire ce site en français', title:'Noor Generation — Non-profit' }
+  };
+
+  let lang = 'fr';
+  try { lang = localStorage.getItem('ng-lang') || ((navigator.language || 'fr').toLowerCase().startsWith('fr') ? 'fr' : 'en'); } catch (e) {}
+  if (location.hash === '#en') lang = 'en';
 
   /* ===== NOS ACTIONS : ajoute tes photos / vidéos ici =====
-     Photo : { type:'photo', src:'media/nom-du-fichier.jpg', titre:'...', date:'2026-12', lieu:'Yopougon', cat:'Éducation' }
-     Vidéo YouTube : { type:'youtube', id:'ID_DE_LA_VIDEO', titre:'...', date:'...', lieu:'...', cat:'Santé & nutrition' }
-     Vidéo courte (< 25 Mo) : { type:'video', src:'media/clip.mp4', poster:'media/clip.jpg', titre:'...', date:'...', lieu:'...', cat:'...' } */
+     Photo : { type:'photo', src:'media/nom-du-fichier.jpg', titre:'...', title_en:'...', date:'2026-12', lieu:'Yopougon', cat:'Éducation' }
+     Vidéo YouTube : { type:'youtube', id:'ID_DE_LA_VIDEO', titre:'...', title_en:'...', date:'...', lieu:'...', cat:'Santé & nutrition' }
+     Vidéo courte (< 25 Mo) : { type:'video', src:'media/clip.mp4', poster:'media/clip.jpg', titre:'...', title_en:'...', date:'...', lieu:'...', cat:'...' } */
   const actions = [];
 
   const gal = document.getElementById('gal'), filt = document.getElementById('filters');
   const viewer = document.getElementById('viewer'), vMedia = document.getElementById('viewer-media'), vCap = document.getElementById('viewer-cap');
   const esc = t => String(t ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const thumb = a => a.type === 'youtube' ? `https://i.ytimg.com/vi/${esc(a.id)}/hqdefault.jpg` : esc(a.poster || a.src);
-  let cat = 'Toutes';
+  const ttl = a => (lang === 'en' && a.title_en) ? a.title_en : a.titre;
+  let cat = '*';
   const renderGal = () => {
-    const cats = ['Toutes', ...new Set(actions.map(a => a.cat).filter(Boolean))];
-    filt.innerHTML = cats.length > 2 ? cats.map(c => `<button type="button" aria-pressed="${c === cat}" data-cat="${esc(c)}">${esc(c)}</button>`).join('') : '';
-    const list = actions.filter(a => cat === 'Toutes' || a.cat === cat);
-    gal.innerHTML = list.length ? list.map((a, i) => `<button type="button" class="item" data-i="${actions.indexOf(a)}">
-        ${a.type !== 'photo' ? '<span class="play">▶ Vidéo</span>' : ''}
-        <img src="${thumb(a)}" alt="${esc(a.titre)}" loading="lazy">
-        <span class="cap"><b>${esc(a.titre)}</b><span>${esc([a.lieu, a.date].filter(Boolean).join(' · '))}</span></span></button>`).join('')
-      : '<div class="empty" style="grid-column:1/-1"><b>Nos premiers souvenirs arrivent bientôt</b>Les photos et vidéos de nos actions à Abidjan seront partagées ici, avec l\'accord des familles.</div>';
+    const t = T[lang], cats = ['*', ...new Set(actions.map(a => a.cat).filter(Boolean))];
+    filt.innerHTML = cats.length > 2 ? cats.map(c => `<button type="button" aria-pressed="${c === cat}" data-cat="${esc(c)}">${esc(c === '*' ? t.all : c)}</button>`).join('') : '';
+    const list = actions.filter(a => cat === '*' || a.cat === cat);
+    gal.innerHTML = list.length ? list.map(a => `<button type="button" class="item" data-i="${actions.indexOf(a)}">
+        ${a.type !== 'photo' ? `<span class="play">${t.video}</span>` : ''}
+        <img src="${thumb(a)}" alt="${esc(ttl(a))}" loading="lazy">
+        <span class="cap"><b>${esc(ttl(a))}</b><span>${esc([a.lieu, a.date].filter(Boolean).join(' · '))}</span></span></button>`).join('')
+      : `<div class="empty" style="grid-column:1/-1"><b>${t.emptyB}</b>${t.emptyP}</div>`;
   };
   filt.addEventListener('click', e => { const b = e.target.closest('[data-cat]'); if (b) { cat = b.dataset.cat; renderGal(); } });
   gal.addEventListener('click', e => {
     const b = e.target.closest('[data-i]'); if (!b) return;
     const a = actions[+b.dataset.i];
-    vMedia.innerHTML = a.type === 'youtube' ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(a.id)}?autoplay=1" title="${esc(a.titre)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
+    vMedia.innerHTML = a.type === 'youtube' ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(a.id)}?autoplay=1" title="${esc(ttl(a))}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
       : a.type === 'video' ? `<video src="${esc(a.src)}" controls autoplay playsinline></video>`
-      : `<img src="${esc(a.src)}" alt="${esc(a.titre)}">`;
-    vCap.textContent = [a.titre, a.lieu, a.date].filter(Boolean).join(' · ');
+      : `<img src="${esc(a.src)}" alt="${esc(ttl(a))}">`;
+    vCap.textContent = [ttl(a), a.lieu, a.date].filter(Boolean).join(' · ');
     viewer.showModal();
   });
   const closeV = () => { viewer.close(); };
   document.getElementById('viewer-close').addEventListener('click', closeV);
   viewer.addEventListener('close', () => { vMedia.innerHTML = ''; });
   viewer.addEventListener('click', e => { if (e.target === viewer) closeV(); });
-  renderGal();
+
+  const whySel = document.getElementById('f-why'), comSel = document.getElementById('f-commune');
+  const render = () => {
+    const t = T[lang], dict = lang === 'en' ? EN : FR;
+    document.documentElement.lang = lang;
+    document.title = t.title;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.textContent = v; });
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => { const v = dict[el.dataset.i18nAria]; if (v != null) el.setAttribute('aria-label', v); });
+    const btn = document.getElementById('lang'); btn.textContent = t.switchTo; btn.setAttribute('aria-label', t.switchLabel);
+    document.getElementById('progs').innerHTML = progs.map(p => { const [h, d] = p[lang];
+      return `<article class="prog"><div class="ic">${svg(ic[p.i])}</div><div><h3>${h}</h3><p>${d}</p></div></article>`; }).join('');
+    document.getElementById('ways').innerHTML = ways.map(w => { const [h, d, b] = w[lang];
+      return `<div class="way"><h3>${h}</h3><p>${d}</p><a class="btn gold" href="#contact" data-why="${w.v}">${b}</a></div>`; }).join('');
+    const wv = whySel.value, cv = comSel.value;
+    whySel.innerHTML = whys.map(w => `<option value="${w.v}">${w[lang]}</option>`).join('');
+    comSel.innerHTML = `<option value="">${t.pick}</option>` + communes.map(c => `<option>${c}</option>`).join('') + `<option value="autre">${t.other}</option>`;
+    if (wv) whySel.value = wv; if (cv) comSel.value = cv;
+    document.getElementById('f-out').textContent = '';
+    renderGal();
+  };
+  document.getElementById('lang').addEventListener('click', () => {
+    lang = lang === 'fr' ? 'en' : 'fr';
+    try { localStorage.setItem('ng-lang', lang); } catch (e) {}
+    render();
+  });
+  document.getElementById('ways').addEventListener('click', e => {
+    const a = e.target.closest('[data-why]'); if (a) whySel.value = a.dataset.why;
+  });
+  render();
 
   const form = document.getElementById('form'), out = document.getElementById('f-out');
   form.addEventListener('submit', e => {
     e.preventDefault();
     const n = document.getElementById('f-name').value.trim(), m = document.getElementById('f-mail').value.trim();
-    if (!n || !/^\S+@\S+\.\S+$/.test(m)) { out.textContent = 'Pour vous répondre, il nous faut votre nom et une adresse email valide.'; return; }
-    out.textContent = 'Merci ' + n + ', votre message nous touche. Le formulaire n\'est pas encore relié à notre boîte mail : en attendant, écrivez-nous à [Email].';
+    if (!n || !/^\S+@\S+\.\S+$/.test(m)) { out.textContent = T[lang].err; return; }
+    out.textContent = T[lang].ok(n);
   });
 
   const nav = document.getElementById('nav');
