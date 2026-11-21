@@ -33,7 +33,7 @@ a{color:inherit}
 nav{position:fixed;inset:0 0 auto 0;z-index:10;padding:12px max(5vw,18px);color:#FBF3EA;transition:background .3s}
 nav .wrap{display:flex;align-items:center;gap:20px}
 nav.solid{background:var(--terra-d)}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto;min-width:0}
 .brand b{font:700 18px/1 'Cinzel',serif;letter-spacing:1.5px}
 .links{display:flex;gap:6px;flex-wrap:wrap}
 .links a{text-decoration:none;padding:10px 12px;border-radius:8px;font-weight:500;font-size:15px}
@@ -47,7 +47,8 @@ nav.solid{background:var(--terra-d)}
 .lang button:hover{background:rgba(255,255,255,.12)}
 .lang button[aria-pressed=true]{background:#FBF3EA;color:#5E2A17}
 .brand b{white-space:nowrap}.links{flex-wrap:nowrap}.links a{white-space:nowrap}
-@media(max-width:1100px){.links{display:none}}
+@media(max-width:1180px){.links{display:none}}
+@media(max-width:680px){.brand b{display:flex;flex-direction:column;font-size:13px;line-height:1.15;letter-spacing:1.5px}}
 .btn{white-space:nowrap}.donate .short{display:none}
 @media(max-width:480px){.brand{gap:8px}.brand b{font-size:13px;letter-spacing:.5px}.brand svg{width:30px;flex:none}nav .btn{min-height:44px;padding:0 16px;font-size:15px}nav .wrap{gap:8px}.brand b{display:flex;flex-direction:column;font-size:12px;line-height:1.15;letter-spacing:1.5px}.lang button{min-width:36px;padding:0 8px}.donate .long{display:none}.donate .short{display:inline}}
 @media(max-width:330px){.brand b{display:none}}
