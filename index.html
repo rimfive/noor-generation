@@ -8,23 +8,17 @@
 <link rel="icon" href="media/favicon.png">
 <meta property="og:image" content="https://noorgeneration.org/media/logo-ng-principal.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* VOICE: warm, hopeful, dignified — a promise to children, not a pity appeal.
-   IDEA: the logo's sunrise over the lagoon — each child is a light rising.
-   PICTURE: a live 3D sunrise: low-poly sun over moving water, small lights drifting up.
-   COLOUR and TYPE: terracotta field, Abidjan-lagoon teal, sun gold; Cinzel for the name, Fraunces titles, DM Sans body.
-   LAYOUT: full-bleed 3D hero, then sand bands, programmes as a 2x2, one teal band to act, terracotta footer. */
-:root{color-scheme:light dark;
-  --terra:#A4532E;--terra-d:#7E3C1F;--gold:#F2C48D;--lagoon:#14514D;
-  --bg:light-dark(#FBF6EF,#1A1210);--card:light-dark(#FFFFFF,#261A16);
-  --ink:light-dark(#2E1B13,#F6EBDD);--muted:light-dark(#6B4F42,#CDB7A6);
-  --line:light-dark(#E8D9C8,#3B2A23)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+/* Charte graphique Noor Generation v1.0: terracotta #B4532A, doré #CBA55E (touches), blanc doux #FBF6EE, brun nuit #2B1A12; Cardo titres, Poppins textes. */
+:root{color-scheme:light;
+  --terra:#B4532A;--terra-d:#93421F;--gold:#CBA55E;--night:#2B1A12;--soft:#FBF6EE;
+  --bg:#FBF6EE;--card:#FFFFFF;--ink:#2B1A12;--muted:#6B4E40;--line:#EADCCB;--sand:#F3E7D8}
+
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 'DM Sans',system-ui,sans-serif;overflow-x:clip}
-h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.08;text-wrap:balance;margin:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 16px/1.7 'Poppins',system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:'Cardo',Georgia,serif;font-weight:700;line-height:1.1;text-wrap:balance;margin:0}
 p{text-wrap:pretty}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
@@ -32,35 +26,35 @@ a{color:inherit}
 .band{padding:clamp(56px,8vw,112px) max(5vw,18px)}
 
 /* nav */
-nav{position:fixed;inset:0 0 auto 0;z-index:10;padding:12px max(5vw,18px);color:#FBF3EA;transition:background .3s}
+nav{position:fixed;inset:0 0 auto 0;z-index:10;padding:12px max(5vw,18px);color:#FBF6EE;transition:background .3s}
 nav .wrap{display:flex;align-items:center;gap:20px}
-nav.solid{background:var(--terra-d)}
-.brand{display:flex;align-items:center;text-decoration:none;margin-right:auto;min-width:0}.brand img{display:block;height:60px;width:auto}
+nav.solid{background:var(--terra)}
+.brand{display:flex;align-items:center;text-decoration:none;margin-right:auto;min-width:0}.brand img{display:block;height:72px;width:auto}.brand .ico{display:none}
 .links{display:flex;gap:6px;flex-wrap:wrap}
 .links a{text-decoration:none;padding:10px 12px;border-radius:8px;font-weight:500;font-size:15px}
 .links a:hover{background:rgba(255,255,255,.12)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;
-  font:700 16px 'DM Sans',sans-serif;text-decoration:none;border:0;cursor:pointer}
-.btn.gold{background:var(--gold);color:#3A2218}.btn.gold:hover{background:#F7D3A8}
+  font:500 15px 'Poppins',sans-serif;text-decoration:none;border:0;cursor:pointer}
+.btn.gold{background:var(--gold);color:#2B1A12}.btn.gold:hover{background:#D8B877}
 .btn.ghost{border:2px solid currentColor;background:transparent;color:inherit}
 .lang{display:flex;gap:2px;padding:3px;border-radius:999px;border:1.5px solid rgba(251,243,234,.5);background:rgba(20,8,4,.18)}
-.lang button{min-width:40px;min-height:36px;padding:0 10px;border:0;border-radius:999px;background:transparent;color:#FBF3EA;font:700 13px 'DM Sans',sans-serif;letter-spacing:.8px;cursor:pointer;transition:background .2s,color .2s}
+.lang button{min-width:40px;min-height:36px;padding:0 10px;border:0;border-radius:999px;background:transparent;color:#FBF6EE;font:700 13px 'Poppins',sans-serif;letter-spacing:.8px;cursor:pointer;transition:background .2s,color .2s}
 .lang button:hover{background:rgba(255,255,255,.12)}
-.lang button[aria-pressed=true]{background:#FBF3EA;color:#5E2A17}
+.lang button[aria-pressed=true]{background:#FBF6EE;color:var(--terra)}
 .links{flex-wrap:nowrap}.links a{white-space:nowrap}
 @media(max-width:1320px){.links{display:none}}
 .btn{white-space:nowrap}.donate .short{display:none}
-@media(max-width:480px){.brand img{height:46px}nav .btn{min-height:44px;padding:0 16px;font-size:15px}nav .wrap{gap:8px}.lang button{min-width:36px;padding:0 8px}.donate .long{display:none}.donate .short{display:inline}}
+@media(max-width:480px){.brand .full{display:none}.brand .ico{display:block;height:48px}nav .btn{min-height:44px;padding:0 16px;font-size:15px}nav .wrap{gap:8px}.lang button{min-width:36px;padding:0 8px}.donate .long{display:none}.donate .short{display:inline}}
 
 
 /* hero */
-.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#FBF3EA;
-  background:linear-gradient(180deg,#5E2A17 0%,#A4532E 45%,#D98A55 72%,#14514D 72.1%,#0E3B38 100%)}
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#FBF6EE;
+  background:linear-gradient(180deg,#6E2E14 0%,#B4532A 48%,#D78A55 72%,#7A3418 72.1%,#2B1A12 100%)}
 #scene{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hero .copy{position:relative;z-index:2;padding:0 max(5vw,18px) clamp(48px,8vh,96px);max-width:1180px;margin:0 auto;width:100%;
   pointer-events:none}
 .hero .copy>*{pointer-events:auto}
-.hero h1{font-size:clamp(44px,7vw,92px);font-weight:700;max-width:12ch;text-shadow:0 2px 30px rgba(40,15,5,.45)}
+.hero h1{font-size:clamp(42px,5.6vw,76px);font-weight:700;max-width:11ch;text-shadow:0 2px 30px rgba(40,15,5,.45)}
 .hero p{font-size:clamp(17px,1.6vw,20px);max-width:520px;margin:18px 0 28px;text-shadow:0 1px 14px rgba(40,15,5,.6)}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 
@@ -73,12 +67,12 @@ nav.solid{background:var(--terra-d)}
 .noor p{margin:0;color:var(--muted)}
 .legal{margin:16px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
 .legal div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.legal dt{color:var(--muted)}.legal dd{margin:0;font-weight:700;overflow-wrap:anywhere}
-@media(max-width:700px){.hero::after{content:'';position:absolute;inset:auto 0 0 0;height:65%;background:linear-gradient(0deg,rgba(14,40,37,.8),rgba(14,40,37,0));z-index:1;pointer-events:none}}
+.legal dt{color:var(--muted)}.legal dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+@media(max-width:700px){.hero::after{content:'';position:absolute;inset:auto 0 0 0;height:65%;background:linear-gradient(0deg,rgba(43,26,18,.82),rgba(43,26,18,0));z-index:1;pointer-events:none}}
 @media(max-width:820px){.mission .wrap{grid-template-columns:1fr}}
 
 /* programmes */
-.programs{background:light-dark(#F4E8DA,#211613)}
+.programs{background:var(--sand)}
 .programs h2,.act h2,.contact h2{font-size:clamp(32px,4vw,48px);margin-bottom:12px}
 .intro{color:var(--muted);max-width:620px;margin:0 0 40px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
@@ -97,42 +91,37 @@ nav.solid{background:var(--terra-d)}
 .item .cap span{font-size:14px;color:var(--muted)}
 .item .play{position:absolute;top:12px;left:12px;background:rgba(20,10,5,.7);color:#fff;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}
-.filters button{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:500 15px 'DM Sans',sans-serif;cursor:pointer}
-.filters button[aria-pressed=true]{background:var(--terra);border-color:var(--terra);color:#FBF3EA}
+.filters button{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:500 15px 'Poppins',sans-serif;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--terra);border-color:var(--terra);color:#FBF6EE}
 .empty{border:2px dashed var(--line);border-radius:22px;padding:48px 24px;text-align:center;color:var(--muted)}
-.empty b{display:block;font:700 24px 'Fraunces',serif;color:var(--ink);margin-bottom:6px}
+.empty b{display:block;font:700 24px 'Cardo',serif;color:var(--ink);margin-bottom:6px}
 dialog{border:0;border-radius:18px;padding:0;max-width:min(960px,94vw);width:100%;background:#000;color:#fff}
 dialog::backdrop{background:rgba(10,5,3,.85)}
 dialog img,dialog video,dialog iframe{display:block;width:100%;max-height:78vh;object-fit:contain;border:0;aspect-ratio:16/9;background:#000}
 dialog .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;background:#1a1210}
-dialog .bar button{min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--gold);color:#3A2218;font:700 15px 'DM Sans',sans-serif;cursor:pointer}
+dialog .bar button{min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--gold);color:#2B1A12;font:700 15px 'Poppins',sans-serif;cursor:pointer}
 
 /* t-shirt + partners */
-.shirt .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(28px,5vw,72px);align-items:center}
-.shirt h2,.partners h2{font-size:clamp(32px,4vw,48px);margin-bottom:12px}
-.shirt .quote{margin:20px 0 0;padding:18px 20px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
-.shirt .quote b{display:block;font:700 22px 'Fraunces',serif;color:var(--lagoon)}
-.shirt .quote span{color:var(--muted)}
-.views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.views figure{margin:0;background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
-.views img{display:block;width:100%;height:auto}
-.views figcaption{text-align:center;padding:10px;font-size:14px;color:#6B4F42;background:#fff}
-@media(max-width:820px){.shirt .wrap{grid-template-columns:1fr}}
-.partners{background:light-dark(#F4E8DA,#211613)}
+.shirt{text-align:center}
+.shirt h2,.partners h2{font-size:clamp(32px,4vw,46px);margin-bottom:8px}
+.shirt .tag{margin:0 0 32px;font:400 18px 'Cardo',serif;letter-spacing:.25em;text-transform:uppercase;color:var(--terra)}
+.views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:820px;margin:0 auto}
+.views img{display:block;width:100%;height:auto;border-radius:20px;background:#fff}
+.partners{background:var(--sand)}
 .plist{display:flex;flex-wrap:wrap;gap:18px;margin-top:8px}
 .partner{display:flex;align-items:center;gap:22px;background:#fff;border-radius:22px;padding:22px 28px;border:1px solid var(--line);max-width:560px}
 .partner img{width:120px;height:auto;flex:none}
-.partner h3{font-size:22px;margin-bottom:4px;color:#2E1B13}.partner p{margin:0;color:#6B4F42;font-size:15px}
+.partner h3{font-size:22px;margin-bottom:4px;color:var(--ink)}.partner p{margin:0;color:#6B4F42;font-size:15px}
 @media(max-width:480px){.partner{flex-direction:column;text-align:center}}
-footer .flogo{height:56px;width:auto;display:block}
+footer .flogo{height:80px;width:auto;display:block}
 
 /* act */
-.act{background:var(--lagoon);color:#F1F7F5}
-.act .intro{color:#C9E0DB}
+.act{background:var(--night);color:var(--soft)}
+.act .intro{color:#D9C7B6}
 .ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.way{border:1.5px solid rgba(241,247,245,.35);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.way{border:1.5px solid rgba(203,165,94,.45);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:10px}
 .way h3{font-size:26px}
-.way p{margin:0 0 8px;color:#D6E8E4;flex:1}
+.way p{margin:0 0 8px;color:#E6D8CA;flex:1}
 .way .btn{align-self:flex-start}
 @media(max-width:860px){.ways{grid-template-columns:1fr}}
 
@@ -143,13 +132,13 @@ footer .flogo{height:56px;width:auto;display:block}
 .info span{color:var(--muted)}
 form{display:grid;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
 label{font-weight:500;font-size:15px;display:grid;gap:6px}
-input,textarea,select{font:16px 'DM Sans',sans-serif;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;min-height:46px}
+input,textarea,select{font:16px 'Poppins',sans-serif;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;min-height:46px}
 textarea{min-height:120px;resize:vertical}
-.btn.terra{background:var(--terra);color:#FBF3EA}.btn.terra:hover{background:var(--terra-d)}
-.msg{margin:0;font-size:15px;color:var(--lagoon);font-weight:500}
+.btn.terra{background:var(--terra);color:#FBF6EE}.btn.terra:hover{background:var(--terra-d)}
+.msg{margin:0;font-size:15px;color:var(--terra);font-weight:500}
 @media(max-width:820px){.contact .wrap{grid-template-columns:1fr}}
 
-footer{background:var(--terra-d);color:#FBF3EA;padding:40px max(5vw,18px)}
+footer{background:var(--terra);color:#FBF6EE;padding:40px max(5vw,18px)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
 footer small{opacity:.85;font-size:14px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -158,9 +147,9 @@ footer small{opacity:.85;font-size:14px}
 <body>
 
 <nav id="nav" aria-label="Navigation principale" data-i18n-aria="aNav"><div class="wrap">
-  <a class="brand" href="#top" aria-label="Noor Génération, accueil" data-i18n-aria="aHome"><img src="media/logo-ng-creme.png" alt="Noor Génération" width="117" height="60"></a>
+  <a class="brand" href="#top" aria-label="Noor Génération, accueil" data-i18n-aria="aHome"><img class="full" src="media/logo-ng-creme.png" alt="Noor Génération" width="140" height="72"><img class="ico" src="media/icone-ng-creme.png" alt="" width="58" height="48"></a>
   <div class="links">
-    <a href="#mission" data-i18n="nMission">Mission</a><a href="#programmes" data-i18n="nProg">Programmes</a><a href="#actions" data-i18n="nActions">Nos actions</a><a href="#tenue" data-i18n="nShirt">Notre T-shirt</a><a href="#agir" data-i18n="nAct">Agir</a><a href="#contact" data-i18n="nContact">Contact</a>
+    <a href="#mission" data-i18n="nMission">Mission</a><a href="#programmes" data-i18n="nProg">Programmes</a><a href="#actions" data-i18n="nActions">Nos actions</a><a href="#tenue" data-i18n="nShirt">T-shirts</a><a href="#agir" data-i18n="nAct">Agir</a><a href="#contact" data-i18n="nContact">Contact</a>
   </div>
   <div class="lang" id="lang" role="group" aria-label="Langue / Language"><button type="button" data-l="fr" lang="fr" aria-pressed="true" aria-label="Français">FR</button><button type="button" data-l="en" lang="en" aria-pressed="false" aria-label="English">EN</button></div>
   <a class="btn gold donate" href="#agir"><span class="long" data-i18n="nDonate">Faire un don</span><span class="short" data-i18n="nDonateS">Donner</span></a>
@@ -222,14 +211,11 @@ footer small{opacity:.85;font-size:14px}
 
 <section class="band shirt" id="tenue">
   <div class="wrap">
-    <div>
-      <h2 data-i18n="tH2">Notre T-shirt</h2>
-      <p class="intro" data-i18n="tIntro">Le T-shirt vert d'eau que portent nos bénévoles sur le terrain. Devant, le logo Noor Génération ; au dos, notre message, avec notre partenaire la CNAM.</p>
-      <div class="quote"><b data-i18n="tQuoteB">Ensemble sans barrières</b><span data-i18n="tQuote">Chaque enfant a le droit de grandir, d'apprendre, de rêver et de briller.</span></div>
-    </div>
+    <h2 data-i18n="tH2">Nos T-shirts</h2>
+    <p class="tag" data-i18n="tQuoteB">Ensemble sans barrières</p>
     <div class="views">
-      <figure><img src="media/tshirt-devant.jpg" alt="T-shirt Noor Génération, vue de face" width="892" height="1000" loading="lazy" data-i18n-alt="tAltF"><figcaption data-i18n="tFront">Devant</figcaption></figure>
-      <figure><img src="media/tshirt-dos.jpg" alt="T-shirt Noor Génération, vue de dos avec le logo de la CNAM" width="892" height="1000" loading="lazy" data-i18n-alt="tAltB"><figcaption data-i18n="tBack">Dos</figcaption></figure>
+      <img src="media/tshirt-devant.jpg" alt="T-shirt Noor Génération, devant" width="892" height="1000" loading="lazy" data-i18n-alt="tAltF">
+      <img src="media/tshirt-dos.jpg" alt="T-shirt Noor Génération, dos" width="892" height="1000" loading="lazy" data-i18n-alt="tAltB">
     </div>
   </div>
 </section>
@@ -284,7 +270,7 @@ footer small{opacity:.85;font-size:14px}
 
 <footer>
   <div class="wrap">
-    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><img class="flogo" src="media/logo-ng-creme.png" alt="Noor Génération" width="109" height="56"><b style="font:700 15px 'Cinzel',serif;letter-spacing:1.5px" data-i18n="fTag">Bâtir l'avenir, ensemble</b></div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><img class="flogo" src="media/logo-ng-creme.png" alt="Noor Génération" width="156" height="80"><b style="font:400 16px 'Cardo',serif;letter-spacing:1.5px" data-i18n="fTag">Bâtir l'avenir, ensemble</b></div>
     <small data-i18n="fLegal">© 2026 Noor Génération · ONG de droit ivoirien · Récépissé n° 001/NG/PR/VP/2026/dm · 12 BP 692 Abidjan 12</small>
   </div>
 </footer>
@@ -294,8 +280,8 @@ footer small{opacity:.85;font-size:14px}
   /* ===== TEXTES ANGLAIS (English). Le français est dans le HTML. ===== */
   const EN = {
     aNav:'Main navigation', aHome:'Noor Generation, home', aFilter:'Filter actions', aViewer:'Enlarged media',
-    nMission:'Mission', nProg:'Programs', nActions:'Our work', nAct:'Get involved', nContact:'Contact', nShirt:'Our T-shirt',
-    tH2:'Our T-shirt', tIntro:'The sage-green T-shirt our volunteers wear in the field. On the front, the Noor Generation logo; on the back, our message, alongside our partner CNAM.', tQuoteB:'Together, without barriers', tQuote:'Every child has the right to grow, to learn, to dream and to shine.', tFront:'Front', tBack:'Back', tAltF:'Noor Generation T-shirt, front view', tAltB:'Noor Generation T-shirt, back view with the CNAM logo',
+    nMission:'Mission', nProg:'Programs', nActions:'Our work', nAct:'Get involved', nContact:'Contact', nShirt:'T-shirts',
+    tH2:'Our T-shirts', tIntro:'The sage-green T-shirt our volunteers wear in the field. On the front, the Noor Generation logo; on the back, our message, alongside our partner CNAM.', tQuoteB:'Together, without barriers', tQuote:'Every child has the right to grow, to learn, to dream and to shine.', tFront:'Front', tBack:'Back', tAltF:'Noor Generation T-shirt, front view', tAltB:'Noor Generation T-shirt, back view with the CNAM logo',
     paH2:'Our partners', paIntro:'They walk beside us for the health and future of Abidjan\'s children. Thank you.', paCnam:'National Health Insurance Fund of Côte d\'Ivoire', nDonate:'Donate', nDonateS:'Donate',
     h1:'Helping every child shine.',
     heroP:'In Abidjan, some children grow up far from school, from care, or from a safe home. At Noor Generation, we walk beside them, so they can learn, grow up healthy and dare to dream of a future.',
@@ -326,7 +312,7 @@ footer small{opacity:.85;font-size:14px}
     home:'<path d="M3 10.5 12 3l9 7.5M5 9.5V21h14V9.5M10 21v-6h4v6"/>',
     hands:'<circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20a6 6 0 0 1 12 0M15 20a4 4 0 0 1 6-3.5"/>'
   };
-  const svg = p => `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FBF3EA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+  const svg = p => `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FBF6EE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
   const progs = [
     { i:'book', fr:['Éducation','Un cartable, des fournitures, des frais de scolarité payés, un coup de main pour les devoirs : tout pour qu\'aucun enfant ne quitte l\'école faute de moyens.'],
       en:['Education','A school bag, supplies, school fees paid, help with homework: everything so that no child has to leave school for lack of money.'] },
@@ -469,18 +455,18 @@ import * as THREE from 'three';
     renderer.outputColorSpace = THREE.SRGBColorSpace;
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.Fog(0xA4532E, 18, 60);
+    scene.fog = new THREE.Fog(0xB4532A, 18, 60);
     const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 200);
     camera.position.set(0, 3.2, 14);
 
-    scene.add(new THREE.HemisphereLight(0xFFD9A8, 0x14514D, 1.4));
+    scene.add(new THREE.HemisphereLight(0xFFD9A8, 0x2B1A12, 1.4));
     const key = new THREE.DirectionalLight(0xFFC98A, 2.2);
     key.position.set(0, 6, -10); scene.add(key);
 
     // Sun: low-poly core + glow + rays
     const sun = new THREE.Group(); sun.position.set(3.2, 4.2, -14); scene.add(sun);
     const core = new THREE.Mesh(new THREE.IcosahedronGeometry(2.4, 2),
-      new THREE.MeshStandardMaterial({ color: 0xF2C48D, emissive: 0xF0A85C, emissiveIntensity: 1.1, flatShading: true, roughness: .6 }));
+      new THREE.MeshStandardMaterial({ color: 0xE3BF7A, emissive: 0xCBA55E, emissiveIntensity: 1.1, flatShading: true, roughness: .6 }));
     sun.add(core);
     const glowTex = (() => {
       const c = document.createElement('canvas'); c.width = c.height = 128;
@@ -492,7 +478,7 @@ import * as THREE from 'three';
     const glow = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
     glow.scale.set(14, 14, 1); sun.add(glow);
     const rays = new THREE.Group(); sun.add(rays);
-    const rayGeo = new THREE.BoxGeometry(.22, 1.3, .22), rayMat = new THREE.MeshBasicMaterial({ color: 0xFBE3C2 });
+    const rayGeo = new THREE.BoxGeometry(.22, 1.3, .22), rayMat = new THREE.MeshBasicMaterial({ color: 0xF3DDB0 });
     for (let i = 0; i < 12; i++) {
       const a = i / 12 * Math.PI * 2, r = new THREE.Mesh(rayGeo, rayMat);
       r.position.set(Math.cos(a) * 3.6, Math.sin(a) * 3.6, 0); r.rotation.z = a - Math.PI / 2; rays.add(r);
@@ -501,7 +487,7 @@ import * as THREE from 'three';
     // Sea: low-poly animated plane (the logo's waves)
     const seaGeo = new THREE.PlaneGeometry(80, 50, 90, 60); seaGeo.rotateX(-Math.PI / 2);
     const base = seaGeo.attributes.position.array.slice();
-    const sea = new THREE.Mesh(seaGeo, new THREE.MeshStandardMaterial({ color: 0x1E6A63, flatShading: true, roughness: .45, metalness: .1 }));
+    const sea = new THREE.Mesh(seaGeo, new THREE.MeshStandardMaterial({ color: 0x8A3B1C, flatShading: true, roughness: .45, metalness: .1 }));
     sea.position.set(0, -.6, -8); scene.add(sea);
 
     // Lights rising: one per child
